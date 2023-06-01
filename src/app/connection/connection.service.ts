@@ -31,4 +31,8 @@ export class ConnectionService {
   registrarTercero(tercero:any) {
     return this.http.post(this.apiBackend + "/terceros/new", JSON.stringify(tercero), this.httpOptions);
   }
+
+  inicioSesion(dataLogin: any) {
+    return this.http.post(this.apiBackend + "/login", JSON.stringify(dataLogin), this.httpOptions);
+  }
 }

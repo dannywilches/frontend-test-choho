@@ -1,45 +1,23 @@
-<div class="card shadow-card  mt-3 mb-3">
-  <div class="card-header">
-      Lista de Pedidos
-  </div>
-  <div class="card-body">
-      <div class="row">
-          <div class="col-sm-12">
-              <pre>
-                <table class="table table-responsive table-striped table-hover">
-                    <thead>
-                        <tr class="text-center">
-                            <th>Fecha Pedido</th>
-                            <th>Prefijo</th>
-                            <th>N° Pedido</th>
-                            <th>Nit</th>
-                            <th>Razón Social</th>
-                            <th>Vendedor</th>
-                            <th>Departamento</th>
-                            <th>Ciudad</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="text-center" *ngFor="let pedido of pedidos">
-                            <td>{{pedido.fecha_pedido}}</td>
-                            <td>{{pedido.prefijo}}</td>
-                            <td>{{pedido.num_pedido}}</td>
-                            <td>{{pedido.nit}}</td>
-                            <td>{{pedido.razon_social}}</td>
-                            <td>{{pedido.vendedor}}</td>
-                            <td>{{pedido.departamento}}</td>
-                            <td>{{pedido.ciudad}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-              </pre>
-          </div>
-      </div>
-  </div>
-  <div class="card-footer">
-    <div class="row text-center">
-      <div class="col-sm-12">
-        <button class="btn btn-sm btn-primary" routerLink="/crear-pedido">Crear Pedido</button>
+ <div class="h-100 w-100" style="overflow-y: scroll; opacity: 50;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand px-3" href="#">Test Desarrollo Choho</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/pedidos">Lista de Pedidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/terceros">Lista de Terceros</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="content-wrapper">
+    <div class="container">
+      <div class="row mt-3 mb-3 p-3 d-flex justify-content-center abs-center">
+        <div class="col-sm-12 mt-3">
+          <app-pedidos></app-pedidos>
+        </div>
       </div>
     </div>
   </div>
