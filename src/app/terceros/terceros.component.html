@@ -1,0 +1,38 @@
+<div class="card shadow-card  mt-3 mb-3">
+  <div class="card-header">
+      Lista de Terceros
+  </div>
+  <div class="card-body">
+      <div class="row">
+          <div class="col-sm-12">
+              <pre>
+                <table class="table table-responsive table-striped table-hover">
+                    <thead>
+                        <tr class="text-center">
+                            <th>Nit</th>
+                            <th>Razón Social</th>
+                            <th>Tipo</th>
+                            <th>Activo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-center" *ngFor="let tercero of terceros">
+                            <td>{{tercero.nit}}</td>
+                            <td>{{tercero.razon_social}}</td>
+                            <td>{{tercero.tipo}}</td>
+                            <td>{{tercero.activo}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+              </pre>
+          </div>
+      </div>
+  </div>
+  <div class="card-footer">
+    <div class="row text-center">
+      <div class="col-sm-12">
+        <button class="btn btn-sm btn-primary" routerLink="/crear-terceros">Crear Tercero</button>
+      </div>
+    </div>
+  </div>
+</div>

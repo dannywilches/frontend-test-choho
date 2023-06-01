@@ -1,0 +1,90 @@
+
+<div class="card shadow-card  mt-3 mb-3">
+  <div class="card-header">
+    <b>Nuevo Pedido</b>
+  </div>
+  <div class="card-body">
+      <div class="row">
+          <div class="col-sm-12">
+            <form [formGroup]="userForm" (ngSubmit)="nuevoPedido()">
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Fecha Pedido: </label>
+                <input type="date" name="fecha_pedido" formControlName="fecha_pedido" [(ngModel)]="infoPedido.fecha_pedido" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['fecha_pedido'].errors && userForm.controls['fecha_pedido'].dirty" class="" style="font-size: 14px; color:red;">
+                  <div *ngIf="userForm.controls['fecha_pedido'].invalid">
+                    Este campo es requerido
+                  </div>
+                </div>
+              </div>
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Prefijo: </label>
+                <input type="text" name="prefijo" formControlName="prefijo" [(ngModel)]="infoPedido.prefijo" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['prefijo'].errors && userForm.controls['prefijo'].dirty" class="" style="font-size: 14px; color:red;">
+                  <div *ngIf="userForm.controls['prefijo'].invalid">
+                    Este campo es requerido
+                  </div>
+                </div>
+              </div>
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Numero pedido: </label>
+                <input type="text" name="num_pedido" formControlName="num_pedido" [(ngModel)]="infoPedido.num_pedido" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['num_pedido'].errors && userForm.controls['num_pedido'].dirty" class="" style="font-size: 14px; color:red;">
+                  <div *ngIf="userForm.controls['num_pedido'].invalid">
+                    Este campo es requerido
+                  </div>
+                </div>
+              </div>
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Nit: </label>
+                <input type="text" name="nit" formControlName="nit" [(ngModel)]="infoPedido.nit" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['nit'].errors && userForm.controls['nit'].dirty" class="" style="font-size: 14px; color:red;">
+                  Este campo es requerido
+                </div>
+              </div>
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Razon Social: </label>
+                <input type="text" name="razon_social" formControlName="razon_social" [(ngModel)]="infoPedido.razon_social" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['razon_social'].errors && userForm.controls['razon_social'].dirty" class="" style="font-size: 14px; color:red;">
+                  Este campo es requerido
+                </div>
+              </div>
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Vendedor: </label>
+                <input type="text" name="vendedor" formControlName="vendedor" [(ngModel)]="infoPedido.vendedor" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['vendedor'].errors && userForm.controls['vendedor'].dirty" class="" style="font-size: 14px; color:red;">
+                  <div *ngIf="userForm.controls['vendedor'].invalid">
+                    Este campo es requerido
+                  </div>
+                </div>
+              </div>
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Departamento: </label>
+                <input type="text" name="departamento" formControlName="departamento" [(ngModel)]="infoPedido.departamento" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['departamento'].errors && userForm.controls['departamento'].dirty" class="" style="font-size: 14px; color:red;">
+                  <div *ngIf="userForm.controls['departamento'].invalid">
+                    Este campo es requerido
+                  </div>
+                </div>
+              </div>
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Ciudad: </label>
+                <input type="text" name="ciudad" formControlName="ciudad" [(ngModel)]="infoPedido.ciudad" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['ciudad'].errors && userForm.controls['ciudad'].dirty" class="" style="font-size: 14px; color:red;">
+                  <div *ngIf="userForm.controls['ciudad'].invalid">
+                    Este campo es requerido
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+      </div>
+  </div>
+  <div class="card-footer">
+    <div class="row">
+      <div class="col-sm-6 text-right">
+        <button class="btn btn-sm btn-success mx-auto" (click)="nuevoPedido()" [disabled]="userForm.invalid" type="submit">Registrar Pedido</button>
+        <button class="btn btn-sm btn-danger mx-auto" routerLink="/home">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+
+<div class="card shadow-card  mt-3 mb-3">
+  <div class="card-header">
+    <b>Nuevo Tercero</b>
+  </div>
+  <div class="card-body">
+      <div class="row">
+          <div class="col-sm-12">
+            <form [formGroup]="userForm" (ngSubmit)="nuevoTercero()">
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Nit: </label>
+                <input type="text" name="nit" formControlName="nit" [(ngModel)]="infoTercero.nit" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['nit'].errors && userForm.controls['nit'].dirty" class="" style="font-size: 14px; color:red;">
+                  Este campo es requerido
+                </div>
+              </div>
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Razon Social: </label>
+                <input type="text" name="razon_social" formControlName="razon_social" [(ngModel)]="infoTercero.razon_social" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['razon_social'].errors && userForm.controls['razon_social'].dirty" class="" style="font-size: 14px; color:red;">
+                  Este campo es requerido
+                </div>
+              </div>
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Tipo: </label>
+                <input type="text" name="tipo" formControlName="tipo" [(ngModel)]="infoTercero.tipo" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['tipo'].errors && userForm.controls['tipo'].dirty" class="" style="font-size: 14px; color:red;">
+                  <div *ngIf="userForm.controls['tipo'].invalid">
+                    Este campo es requerido
+                  </div>
+                </div>
+              </div>
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Activo: </label>
+                <input type="text" name="activo" formControlName="activo" [(ngModel)]="infoTercero.activo" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['activo'].errors && userForm.controls['activo'].dirty" class="" style="font-size: 14px; color:red;">
+                  <div *ngIf="userForm.controls['activo'].invalid">
+                    Este campo es requerido
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+      </div>
+  </div>
+  <div class="card-footer">
+    <div class="row">
+      <div class="col-sm-6 text-right">
+        <button class="btn btn-sm btn-success mx-auto" (click)="nuevoTercero()" [disabled]="userForm.invalid" type="submit">Registrar Tercero</button>
+        <button class="btn btn-sm btn-danger mx-auto" routerLink="/home">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
