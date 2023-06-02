@@ -1,50 +1,33 @@
-<div class="h-100 w-100" style="overflow-y: scroll; opacity: 50;">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand px-3" href="#">Test Desarrollo Choho</a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-      </ul>
-    </div>
-  </nav>
-  <div class="content-wrapper">
-    <div class="container">
-      <div class="row mt-3 mb-3 p-3 d-flex justify-content-center abs-center">
-        <div class="col-sm-12 mt-3">
-          <div class="card mx-auto shadow-card  mt-3 mb-3">
-            <div class="card-header">
-              <b>Inicio de Sesión</b>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-sm-12">
-                      <form [formGroup]="userForm" (ngSubmit)="LoginSession()">
-                        <div class="form-group mt-2 mb-2">
-                          <label for="title">Usuario: </label>
-                          <input type="text" name="email" formControlName="email" [(ngModel)]="dataLogin.email" class="form-control form-control-sm">
-                          <div *ngIf="userForm.controls['email'].errors && userForm.controls['email'].dirty" class="" style="font-size: 14px; color:red;">
-                            Este campo es requerido
-                          </div>
-                        </div>
-                        <div class="form-group mt-2 mb-2">
-                          <label for="title">Contraseña: </label>
-                          <input type="password" name="password" formControlName="password" [(ngModel)]="dataLogin.password" class="form-control form-control-sm">
-                          <div *ngIf="userForm.controls['password'].errors && userForm.controls['password'].dirty" class="" style="font-size: 14px; color:red;">
-                            Este campo es requerido
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                </div>
-            </div>
-            <div class="card-footer">
-              <div class="row">
-                <div class="col-sm-6 text-right">
-                  <button class="btn btn-sm btn-success mx-auto" (click)="LoginSession()" [disabled]="userForm.invalid" type="submit">Login</button>
+<div class="card mx-auto shadow-card  mt-3 mb-3">
+  <div class="card-header">
+    <b>Inicio de Sesión</b>
+  </div>
+  <div class="card-body">
+      <div class="row">
+          <div class="col-sm-12">
+            <form [formGroup]="userForm" (ngSubmit)="LoginSession()">
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Usuario: </label>
+                <input type="text" name="email" formControlName="email" [(ngModel)]="dataLogin.email" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['email'].errors && userForm.controls['email'].dirty" class="" style="font-size: 14px; color:red;">
+                  Este campo es requerido
                 </div>
               </div>
-            </div>
+              <div class="form-group mt-2 mb-2">
+                <label for="title">Contraseña: </label>
+                <input type="password" name="password" formControlName="password" [(ngModel)]="dataLogin.password" class="form-control form-control-sm">
+                <div *ngIf="userForm.controls['password'].errors && userForm.controls['password'].dirty" class="" style="font-size: 14px; color:red;">
+                  Este campo es requerido
+                </div>
+              </div>
+            </form>
           </div>
-        </div>
+      </div>
+  </div>
+  <div class="card-footer">
+    <div class="row">
+      <div class="col-sm-6 text-right">
+        <button class="btn btn-sm btn-success mx-auto" (click)="LoginSession()" [disabled]="userForm.invalid" type="submit">Login</button>
       </div>
     </div>
   </div>

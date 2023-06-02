@@ -14,6 +14,7 @@ import { CrearPedidoComponent } from './crear-pedido/crear-pedido.component';
 import { CrearTercerosComponent } from './crear-terceros/crear-terceros.component';
 import { LoginComponent } from './login/login.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PedidosComponent } from './pedidos/pedidos.component';
     CrearPedidoComponent,
     CrearTercerosComponent,
     LoginComponent,
-    PedidosComponent
+    PedidosComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
