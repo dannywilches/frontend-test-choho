@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 // import { CookieService } from "ngx-cookie-service";
@@ -15,6 +15,7 @@ import { CrearTercerosComponent } from './crear-terceros/crear-terceros.componen
 import { LoginComponent } from './login/login.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AuthInterceptorService } from './connection/auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,11 @@ import { NavbarComponent } from './navbar/navbar.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

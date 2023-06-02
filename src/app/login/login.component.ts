@@ -38,7 +38,6 @@ export class LoginComponent implements OnInit {
 
   LoginSession(){
     this.connectionService.inicioSesion(this.userForm.value).subscribe(response =>{
-      console.log(response);
       this.handleResponse(response);
       this.Auth.changeAuthStatus(true);
       this.router.navigateByUrl('/terceros');

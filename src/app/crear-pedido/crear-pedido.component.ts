@@ -42,7 +42,7 @@ export class CrearPedidoComponent implements OnInit {
           'El pedido ha sido registrado',
           'success'
         ).then((result) => {
-          this.router.navigate(['/', 'home']);
+          this.router.navigate(['/', 'pedidos']);
         });
       }
       else{
