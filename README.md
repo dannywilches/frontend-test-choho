@@ -1,28 +1,21 @@
-# SectionFrontend
+# Para la instalación de la parte del Frontend primero abriremos la carpeta donde vamos a clonar el repositorio y abrimos el cmd.
+# Una vez adentro ejecutaremos el siguiente comando, el cual añadirá todos los archivos del repositorio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
+git clone https://github.com/dannywilches/frontend-test-choho
 
-## Development server
+# Luego navegaremos hasta la carpeta creada al realizar la clonación
+# Ejecutaremos el siguiente comando para instalar todos los paquetes necesarios
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+npm install
 
-## Code scaffolding
+# Una vez instalados todos los paquetes ejecutaremos el comando para lanzar la app
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+ng serve
 
-## Build
+# Ya corriendo la aplicación podemos abrir el navegador e ingresar a la siguiente URL http://127.0.0.1:4200/login
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Para ingresar a la aplicación hay unos datos de prueba creados los cuales corresponden a un usuario y clave. 
+# Usuario: test@prueba.com
+# Clave: Test123
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# fronend-test-choho
+# Nota: Recuerde que para poder ingresar y realizar estas pruebas es necesario primer haber ejecutado todo lo indicado en el README del Backend y estar en ejecución
